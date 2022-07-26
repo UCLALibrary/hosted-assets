@@ -1,0 +1,259 @@
+/* UCLA Global */
+@import url("https://use.typekit.net/xso3wzv.css");
+
+@font-face {
+    font-family: "Karbon";
+    src: url(//libapps.s3.amazonaws.com/sites/705/include/karbon-web-light.woff) format("woff");
+    font-style: normal;
+    font-weight: 300;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: "Karbon";
+    src: url(//libapps.s3.amazonaws.com/sites/705/include/karbon-web-regular.woff) format("woff");
+    font-style: normal;
+    font-weight: 400;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: "Karbon";
+    src: url(//libapps.s3.amazonaws.com/sites/705/include/karbon-web-medium.woff) format("woff");
+    font-style: normal;
+    font-weight: 500;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: "Karbon";
+    src: url(//libapps.s3.amazonaws.com/sites/705/include/karbon-web-semibold.woff) format("woff");
+    font-style: normal;
+    font-weight: 600;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: "Karbon";
+    src: url(//libapps.s3.amazonaws.com/sites/705/include/karbon-web-bold.woff) format("woff");
+    font-style: normal;
+    font-weight: 700;
+    font-display: auto;
+}
+
+/* UCLA Design Tokens */
+
+:root {
+    --font-primary: "Karbon", Helvetica, Arial, sans-serif;
+    --font-secondary: "proxima-nova", Helvetica, Arial, sans-serif;
+
+    --color-status-error-01: #FAD3CF;
+    --color-status-error-02: #B3070D;
+    --color-status-success-01: #F4FACF;
+    --color-status-success-02: #00661B;
+}
+
+/* UCLA Reset */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+hr,
+p,
+ul, 
+ol,
+li,
+fieldset,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* LibWizard */
+.page-container {
+  padding: 48px;
+}
+
+.form-interior {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.page-title {
+    font-family: var(--font-primary) !important;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: left !important;
+    margin-top: 0 !important;
+    margin-bottom: 32px;
+}
+
+body, p, .label {
+    font-family: var(--font-primary);
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: .01em;
+    font-weight: 400;
+}
+
+.form-group {
+  margin-bottom: 24px !important;
+}
+
+.form-control {
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.was-validated .form-control:valid:focus,
+.was-validated .form-control:invalid:focus,
+.was-validated .form-control.ng-untouched:invalid:focus {
+  border-color: #0AA5FF !important;
+  background-color: #EAF2FB !important;
+}
+
+.was-validated .form-control.ng-touched:invalid {
+  border-color: #b3070d !important;
+}
+
+.focus-visible:not(buton):not(a):not(mat-chip):not(mat-expansion-panel-header) {
+  outline: 0 !important;
+}
+
+.form-control, .btn.browse {
+  height: 42px !important;
+}
+
+textarea.form-control {
+  min-height: 146px;
+}
+
+.label {
+  margin-bottom: 8px !important;
+}
+
+.btn:not(.btn-launch) {
+    font-family: var(--font-secondary);
+    font-size: 18px !important;
+    font-weight: 400;
+    line-height: 1.2;
+    border-radius: 0;
+}
+
+button.btn-primary {
+    background-color: #0b6ab7;
+    color: #fff;
+    border: 1px solid #0b6ab7;
+    padding: 12px 40px;
+    }
+
+button.btn-primary:hover,
+button.btn-primary:focus {
+    background-color: #fff;
+    color: #0f0f0f;
+    border: 1px solid #9ecffa;
+ }
+
+ button.btn-outline-secondary {
+    background-color: #fff;
+    color: #0f0f0f;
+    border: 1px solid #9ecffa;
+ }
+
+ button.btn-outline-secondary:hover,
+ button.btn-outline-secondary:focus {
+    background-color: #0b6ab7;
+    color: #fff;
+    border: 1px solid #0b6ab7;
+ }
+
+.required-label {
+    color: #b3070d;
+    font-family: var(--font-primary);
+    font-size: 16px !important;
+    line-height: 1.6;
+    letter-spacing: .01em;
+    font-weight: 400;
+}
+
+a {
+    color: #0b6ab7;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #0aa5ff;
+    text-underline-offset: 1px; 
+}
+
+a:hover {
+    color: #0f0f0f;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #0aa5ff;
+    text-underline-offset: 1px;
+}
+
+.invalid-feedback { 
+    color: #b3070d !important;
+    font-family: var(--font-primary);
+    font-size: 16px !important;
+    font-weight: 400;
+}
+
+hr {
+    border-top: 2px dotted #dcdcdb;
+    height: 1px;
+    margin-bottom: 0;
+}

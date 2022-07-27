@@ -1,5 +1,5 @@
 .page-container {
-  padding: 48px;
+  padding: var(--space-xl);
 }
 
 .form-interior {
@@ -9,24 +9,24 @@
 
 .page-title {
     font-family: var(--font-primary) !important;
-    font-size: 26px;
+    font-size: var(--step-1);
     font-weight: 500;
     line-height: 1.2;
     text-align: left !important;
     margin-top: 0 !important;
-    margin-bottom: 32px;
+    margin-bottom: var(--space-l);
 }
 
 body, p, .label {
     font-family: var(--font-primary);
-    font-size: 20px;
+    font-size: var(--step-0);
     line-height: 1.6;
     letter-spacing: .01em;
     font-weight: 400;
 }
 
 .form-group {
-  margin-bottom: 24px !important;
+  margin-bottom: var(--space-m) !important;
 }
 
 .form-control {
@@ -37,12 +37,12 @@ body, p, .label {
 .was-validated .form-control:valid:focus,
 .was-validated .form-control:invalid:focus,
 .was-validated .form-control.ng-untouched:invalid:focus {
-  border-color: #0AA5FF !important;
-  background-color: #EAF2FB !important;
+  border-color: var(--color-default-cyan-03) !important;
+  background-color: var(--color-primary-blue-01) !important;
 }
 
 .was-validated .form-control.ng-touched:invalid {
-  border-color: #b3070d !important;
+  border-color: var(--color-status-error-02) !important;
 }
 
 .focus-visible:not(buton):not(a):not(mat-chip):not(mat-expansion-panel-header) {
@@ -58,7 +58,7 @@ textarea.form-control {
 }
 
 .label {
-  margin-bottom: 8px !important;
+  margin-bottom: var(--space-xs) !important;
 }
 
 .btn:not(.btn-launch) {
@@ -70,31 +70,31 @@ textarea.form-control {
 }
 
 button.btn-primary {
-    background-color: #0b6ab7;
-    color: #fff;
-    border: 1px solid #0b6ab7;
+    background-color: var(--color-primary-blue-03);
+    color: var(--color-white);
+    border: 1px solid var(--color-primary-blue-03);
     padding: 12px 40px;
     }
 
 button.btn-primary:hover,
 button.btn-primary:focus {
-    background-color: #fff;
-    color: #0f0f0f;
-    border: 1px solid #9ecffa;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border: 1px solid var(--color-primary-blue-02);
     outline: none !important;
  }
 
  button.btn-outline-secondary {
-    background-color: #fff;
-    color: #0f0f0f;
-    border: 1px solid #9ecffa;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border: 1px solid var(--color-primary-blue-02);
  }
 
  button.btn-outline-secondary:hover,
  button.btn-outline-secondary:focus {
-    background-color: #0b6ab7;
-    color: #fff;
-    border: 1px solid #0b6ab7;
+    background-color: var(--color-primary-blue-03);
+    color: var(--color-white);
+    border: 1px solid var(--color-primary-blue-03);
  }
 
  .f-date button.btn-outline-secondary {
@@ -104,47 +104,47 @@ button.btn-primary:focus {
 
 .f-date button.btn-outline-secondary:hover,
 .f-date button.btn-outline-secondary:focus {
-    border-color: #0AA5FF !important;
-    background-color: #EAF2FB;
+    border-color: var(--color-default-cyan-03) !important;
+    background-color: var(--color-primary-blue-01);
     box-shadow: none !important;
-    color: #0f0f0f;
+    color: var(--color-black);
     outline: none !important;
  }
 
 .required-label {
-    color: #b3070d;
+    color: var(--color-status-error-02);
     font-family: var(--font-primary);
-    font-size: 16px !important;
+    font-size: var(--step--1) !important;
     line-height: 1.6;
     letter-spacing: .01em;
     font-weight: 400;
 }
 
 a {
-    color: #0b6ab7;
+    color: var(--color-primary-blue-03);
     text-decoration: underline;
     text-decoration-thickness: 2px;
-    text-decoration-color: #0aa5ff;
+    text-decoration-color: var(--color-default-cyan-03);
     text-underline-offset: 1px; 
 }
 
 a:hover {
-    color: #0f0f0f;
+    color: var(--color-black);
     text-decoration: underline;
     text-decoration-thickness: 2px;
-    text-decoration-color: #0aa5ff;
+    text-decoration-color: var(--color-default-cyan-03);
     text-underline-offset: 1px;
 }
 
 .invalid-feedback { 
-    color: #b3070d !important;
+    color: var(--color-status-error-02) !important;
     font-family: var(--font-primary);
-    font-size: 16px !important;
+    font-size: var(--step--1) !important;
     font-weight: 400;
 }
 
 hr {
-    border-top: 2px dotted #dcdcdb;
+    border-top: 2px dotted var(--color-secondary-grey-02);
     height: 1px;
     margin-bottom: 0;
 }
@@ -152,7 +152,7 @@ hr {
 .form-control,
 .radio-label {
     font-family: var(--font-secondary);
-    font-size: 16px;
+    font-size: var(--step--1);
     font-weight: 400;
     line-height: 1.6;
     color: var(--color-secondary-grey-05);
@@ -160,7 +160,7 @@ hr {
 
 .form-control::placeholder {
     font-family: var(--font-secondary);
-    font-size: 16px !important;
+    font-size: var(--step--1) !important;
     font-style: normal !important;
     font-weight: 400;
     line-height: 1.6 !important;
@@ -172,7 +172,7 @@ hr {
 .was-validated .form-control:not(.ng-touched).ng-invalid:not(select),
 .f-date button.btn-outline-secondary,
 .dropzone {
-  border-color: #999999 !important;
+  border-color: var(--color-secondary-grey-03) !important;
 }
 
 .dropzone {
@@ -181,8 +181,8 @@ hr {
 }
 
 .dropzone:focus {
-    border-color: #0AA5FF !important;
-    background-color: #EAF2FB !important;
+    border-color: var(--color-default-cyan-03) !important;
+    background-color: var(--color-primary-blue-01) !important;
     box-shadow: none !important;
 }
 
@@ -193,15 +193,15 @@ select.form-control {
 }
 
 .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
-  border-color: #0B6AB7;
+  border-color: var(--color-primary-blue-03);
 }
 .mat-radio-button.mat-accent .mat-radio-inner-circle {
-  background-color: #0AA5FF;
+  background-color: var(--color-default-cyan-03);
 }
 
 .mat-checkbox-checked.mat-accent .mat-checkbox-background {
   background-color: transparent;
-  border-color: #0B6AB7;
+  border-color: var(--color-primary-blue-03);
 }
 
 .mat-checkbox-checkmark {
@@ -209,7 +209,7 @@ select.form-control {
 }
 
 .mat-checkbox-checkmark-path {
-  stroke: #0AA5FF !important;
+  stroke: var(--color-default-cyan-03) !important;
 }
 
 .mat-checkbox-inner-container {

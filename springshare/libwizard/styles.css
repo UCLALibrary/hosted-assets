@@ -1,127 +1,3 @@
-/* UCLA Global */
-@import url("https://use.typekit.net/xso3wzv.css");
-
-@font-face {
-    font-family: "Karbon";
-    src: url(//libapps.s3.amazonaws.com/sites/705/include/karbon-web-light.woff) format("woff");
-    font-style: normal;
-    font-weight: 300;
-    font-display: auto;
-}
-
-@font-face {
-    font-family: "Karbon";
-    src: url(//libapps.s3.amazonaws.com/sites/705/include/karbon-web-regular.woff) format("woff");
-    font-style: normal;
-    font-weight: 400;
-    font-display: auto;
-}
-
-@font-face {
-    font-family: "Karbon";
-    src: url(//libapps.s3.amazonaws.com/sites/705/include/karbon-web-medium.woff) format("woff");
-    font-style: normal;
-    font-weight: 500;
-    font-display: auto;
-}
-
-@font-face {
-    font-family: "Karbon";
-    src: url(//libapps.s3.amazonaws.com/sites/705/include/karbon-web-semibold.woff) format("woff");
-    font-style: normal;
-    font-weight: 600;
-    font-display: auto;
-}
-
-@font-face {
-    font-family: "Karbon";
-    src: url(//libapps.s3.amazonaws.com/sites/705/include/karbon-web-bold.woff) format("woff");
-    font-style: normal;
-    font-weight: 700;
-    font-display: auto;
-}
-
-/* UCLA Design Tokens */
-
-:root {
-    --font-primary: "Karbon", Helvetica, Arial, sans-serif;
-    --font-secondary: "proxima-nova", Helvetica, Arial, sans-serif;
-
-    --color-status-error-01: #FAD3CF;
-    --color-status-error-02: #B3070D;
-    --color-status-success-01: #F4FACF;
-    --color-status-success-02: #00661B;
-}
-
-/* UCLA Reset */
-
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-hr,
-p,
-ul, 
-ol,
-li,
-fieldset,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
-}
-
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-
-/* LibWizard */
 .page-container {
   padding: 48px;
 }
@@ -205,6 +81,7 @@ button.btn-primary:focus {
     background-color: #fff;
     color: #0f0f0f;
     border: 1px solid #9ecffa;
+    outline: none !important;
  }
 
  button.btn-outline-secondary {
@@ -218,6 +95,20 @@ button.btn-primary:focus {
     background-color: #0b6ab7;
     color: #fff;
     border: 1px solid #0b6ab7;
+ }
+
+ .f-date button.btn-outline-secondary {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+ }
+
+.f-date button.btn-outline-secondary:hover,
+.f-date button.btn-outline-secondary:focus {
+    border-color: #0AA5FF !important;
+    background-color: #EAF2FB;
+    box-shadow: none !important;
+    color: #0f0f0f;
+    outline: none !important;
  }
 
 .required-label {
@@ -256,4 +147,76 @@ hr {
     border-top: 2px dotted #dcdcdb;
     height: 1px;
     margin-bottom: 0;
+}
+
+.form-control,
+.radio-label {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-secondary-grey-05);
+}
+
+.form-control::placeholder {
+    font-family: var(--font-secondary);
+    font-size: 16px !important;
+    font-style: normal !important;
+    font-weight: 400;
+    line-height: 1.6 !important;
+    color: var(--color-secondary-grey-04);
+}
+
+.form-control,
+.was-validated .form-control:valid,
+.was-validated .form-control:not(.ng-touched).ng-invalid:not(select),
+.f-date button.btn-outline-secondary,
+.dropzone {
+  border-color: #999999 !important;
+}
+
+.dropzone {
+  border-style: solid !important;
+  border-radius: 4px;
+}
+
+.dropzone:focus {
+    border-color: #0AA5FF !important;
+    background-color: #EAF2FB !important;
+    box-shadow: none !important;
+}
+
+select.form-control {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='33' viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg' class='svg__icon-caret-down'%3E%3Cpath d='m10 14.729 6 6 6-6' stroke='%23999999' stroke-width='1.5' stroke-linecap='square' stroke-linejoin='round' class='svg__stroke--primary-blue-03' /%3E%3C/svg%3E") !important;
+  background-size: initial !important;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: #0B6AB7;
+}
+.mat-radio-button.mat-accent .mat-radio-inner-circle {
+  background-color: #0AA5FF;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: transparent;
+  border-color: #0B6AB7;
+}
+
+.mat-checkbox-checkmark {
+  padding: 1px;
+}
+
+.mat-checkbox-checkmark-path {
+  stroke: #0AA5FF !important;
+}
+
+.mat-checkbox-inner-container {
+  height: 20px !important;
+  width: 20px !important;
+}
+
+input[type=checkbox]:focus {
+  outline: none !important;
 }

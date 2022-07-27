@@ -1,4 +1,0 @@
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg__icon-radio-button">
-<path d="M15.9998 9.8645L20.1701 11.6219L21.8975 15.8645L20.1701 20.1071L15.9998 21.8645L11.8295 20.1071L10.1021 15.8645L11.8295 11.6219L15.9998 9.8645Z" fill="#0AA5FF" class="svg__fill--default-cyan-03"/>
-<path d="M10.5626 10.3216L15.9998 8.03037L21.437 10.3216L23.6938 15.8644L21.437 21.4072L15.9998 23.6985L10.5626 21.4072L8.30585 15.8644L10.5626 10.3216Z" stroke="#0B6AB7" class="svg__stroke--primary-blue-03"/>
-</svg>

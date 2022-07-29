@@ -1,12 +1,18 @@
+/* Set space around the form title and form elements */
+.page-header {
+  padding: var(--space-xl) var(--space-xl) 0 var(--space-xl);
+}
 .page-container {
   padding: var(--space-xl);
 }
 
+/* Remove space around form elements */
 .form-interior {
   margin: 0 !important;
   padding: 0 !important;
 }
 
+/* Use step-1 for the form title */
 .page-title {
     font-family: var(--font-primary) !important;
     font-size: var(--step-1);
@@ -17,7 +23,11 @@
     margin-bottom: var(--space-l);
 }
 
-body, p, .label {
+/* Set typography for form labels and other text */
+body, 
+p, 
+.label,
+.alert {
     font-family: var(--font-primary);
     font-size: var(--step-0);
     line-height: 1.6;
@@ -25,132 +35,38 @@ body, p, .label {
     font-weight: 400;
 }
 
-.form-group {
-  margin-bottom: var(--space-m) !important;
+/* Set bolded fonts to be less heavy */
+span[style='font-weight:bold'],
+strong {
+  font-weight: 500 !important;
 }
 
-.form-control {
-  border-radius: 4px;
-  padding: 8px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--step-1) !important;
+  font-weight: 500 !important;
 }
 
-.was-validated .form-control:valid:focus,
-.was-validated .form-control:invalid:focus,
-.was-validated .form-control.ng-untouched:invalid:focus {
-  border-color: var(--color-default-cyan-03) !important;
-  background-color: var(--color-primary-blue-01) !important;
+/* Set spacing for set of paragraphs */
+p + p {
+  margin: 30px 0;
 }
 
-.was-validated .form-control.ng-touched:invalid {
-  border-color: var(--color-status-error-02) !important;
+/* Override inline styling from rich text editor */
+div[style], 
+span[style] {
+    font-family: var(--font-primary) !important;
 }
 
-.focus-visible:not(buton):not(a):not(mat-chip):not(mat-expansion-panel-header) {
-  outline: 0 !important;
-}
-
-.form-control, .btn.browse {
-  height: 42px !important;
-}
-
-textarea.form-control {
-  min-height: 146px;
-}
-
-.label {
-  margin-bottom: var(--space-xs) !important;
-}
-
-.btn:not(.btn-launch) {
-    font-family: var(--font-secondary);
-    font-size: 18px !important;
-    font-weight: 400;
-    line-height: 1.2;
-    border-radius: 0;
-}
-
-button.btn-primary {
-    background-color: var(--color-primary-blue-03);
-    color: var(--color-white);
-    border: 1px solid var(--color-primary-blue-03);
-    padding: 12px 40px;
-    }
-
-button.btn-primary:hover,
-button.btn-primary:focus {
-    background-color: var(--color-white);
-    color: var(--color-black);
-    border: 1px solid var(--color-primary-blue-02);
-    outline: none !important;
- }
-
- button.btn-outline-secondary {
-    background-color: var(--color-white);
-    color: var(--color-black);
-    border: 1px solid var(--color-primary-blue-02);
- }
-
- button.btn-outline-secondary:hover,
- button.btn-outline-secondary:focus {
-    background-color: var(--color-primary-blue-03);
-    color: var(--color-white);
-    border: 1px solid var(--color-primary-blue-03);
- }
-
- .f-date button.btn-outline-secondary {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
- }
-
-.f-date button.btn-outline-secondary:hover,
-.f-date button.btn-outline-secondary:focus {
-    border-color: var(--color-default-cyan-03) !important;
-    background-color: var(--color-primary-blue-01);
-    box-shadow: none !important;
-    color: var(--color-black);
-    outline: none !important;
- }
-
-.required-label {
-    color: var(--color-status-error-02);
-    font-family: var(--font-primary);
-    font-size: var(--step--1) !important;
-    line-height: 1.6;
-    letter-spacing: .01em;
-    font-weight: 400;
-}
-
-a {
-    color: var(--color-primary-blue-03);
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-decoration-color: var(--color-default-cyan-03);
-    text-underline-offset: 1px; 
-}
-
-a:hover {
-    color: var(--color-black);
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-decoration-color: var(--color-default-cyan-03);
-    text-underline-offset: 1px;
-}
-
-.invalid-feedback { 
-    color: var(--color-status-error-02) !important;
-    font-family: var(--font-primary);
-    font-size: var(--step--1) !important;
-    font-weight: 400;
-}
-
-hr {
-    border-top: 2px dotted var(--color-secondary-grey-02);
-    height: 1px;
-    margin-bottom: 0;
-}
-
+/* Set typography for input elements */
 .form-control,
-.radio-label {
+.radio-label,
+.text-14,
+.clear-slider {
     font-family: var(--font-secondary);
     font-size: var(--step--1);
     font-weight: 400;
@@ -158,6 +74,7 @@ hr {
     color: var(--color-secondary-grey-05);
 }
 
+/* Set typography for input placeholder */
 .form-control::placeholder {
     font-family: var(--font-secondary);
     font-size: var(--step--1) !important;
@@ -167,6 +84,140 @@ hr {
     color: var(--color-secondary-grey-04);
 }
 
+/* Set typography for required label */
+.required-label {
+    color: var(--color-status-error-02);
+    font-family: var(--font-primary);
+    font-size: var(--step--1) !important;
+    line-height: 1.6;
+    letter-spacing: .01em;
+    font-weight: 400;
+    vertical-align: middle !important;
+}
+
+/* Set space after each form question */
+.form-group {
+  margin-bottom: var(--space-l) !important;
+}
+
+/* Set styling for inputs */
+.form-control {
+  border-radius: var(--rounded-slightly-all);
+  padding: 8px;
+}
+
+/* Remove extra outline around inputs in focus state */
+.focus-visible:not(buton):not(a):not(mat-chip):not(mat-expansion-panel-header) {
+  outline: 0 !important;
+}
+
+/* Set height of inputs */
+.form-control, 
+.btn.browse {
+  height: 42px !important;
+}
+textarea.form-control {
+  min-height: 146px;
+}
+
+/* Adjust styling for inputs focus state */
+.was-validated .form-control:valid:focus,
+.was-validated .form-control:invalid:focus,
+.was-validated .form-control.ng-untouched:invalid:focus {
+  border-color: var(--color-default-cyan-03) !important;
+  background-color: var(--color-primary-blue-01) !important;
+}
+
+/* Adjust styling for invalid inputs */
+.was-validated .form-control.ng-touched:invalid {
+  border-color: var(--color-status-error-02) !important;
+}
+
+/* Set styling for helper text of invalid inputs */
+.invalid-feedback { 
+    color: var(--color-status-error-02) !important;
+    font-family: var(--font-primary);
+    font-size: var(--step--1) !important;
+    font-weight: 400;
+}
+
+/* Set button styling */
+.btn:not(.btn-launch) {
+    font-family: var(--font-secondary);
+    font-size: 18px !important;
+    font-weight: 400;
+    line-height: 1.2;
+    border-radius: 0;
+}
+
+/* Set submit button styling */
+button.btn-primary {
+    background-color: var(--color-primary-blue-03);
+    color: var(--color-white);
+    border: 1px solid var(--color-primary-blue-03);
+    padding: 12px 40px;
+    margin-top: 30px;
+}
+button.btn-primary:hover,
+button.btn-primary:focus {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border: 1px solid var(--color-primary-blue-02);
+    outline: none !important;
+    box-shadow: none;
+}
+
+/* Set styling for inputs with buttons */
+ button.btn-outline-secondary {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border: 1px solid var(--color-primary-blue-02);
+    border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+ }
+ button.btn-outline-secondary:hover,
+ button.btn-outline-secondary:focus {
+    border-color: var(--color-default-cyan-03) !important;
+    background-color: var(--color-primary-blue-01);
+    box-shadow: none !important;
+    color: var(--color-black);
+    outline: none !important;
+ }
+.f-date .mat-icon {
+  color: var(--color-primary-blue-03) !important;
+}
+
+/* Set styling for links */
+form-preview-component a,
+.form-group a {
+    color: var(--color-primary-blue-03) !important;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--color-default-cyan-03);
+    text-underline-offset: 1px; 
+}
+form-preview-component a:hover,
+form-preview-component a:focus,
+.form-group a:hover,
+.form-group a:focus {
+    color: var(--color-black);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--color-default-cyan-03);
+    text-underline-offset: 1px;
+}
+
+/* Set styling for divider */
+hr {
+    border-top: 2px dotted var(--color-secondary-grey-02);
+    height: 1px;
+    margin-bottom: 0;
+}
+.f-sept {
+  margin: calc(var(--space-l) + 8px) 0 var(--space-l) 0;
+}
+
+/* Set border of inputs in default state */
 .form-control,
 .was-validated .form-control:valid,
 .was-validated .form-control:not(.ng-touched).ng-invalid:not(select),
@@ -174,49 +225,61 @@ hr {
 .dropzone {
   border-color: var(--color-secondary-grey-03) !important;
 }
-
 .dropzone {
   border-style: solid !important;
-  border-radius: 4px;
+  border-radius: var(--rounded-slightly-all);
+  font-size: var(--step--1);
 }
 
+/* Adjusts file upload box in focus state */
 .dropzone:focus {
     border-color: var(--color-default-cyan-03) !important;
     background-color: var(--color-primary-blue-01) !important;
     box-shadow: none !important;
 }
 
+/* Set caret for dropdown */
 select.form-control {
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg width='32' height='33' viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg' class='svg__icon-caret-down'%3E%3Cpath d='m10 14.729 6 6 6-6' stroke='%23999999' stroke-width='1.5' stroke-linecap='square' stroke-linejoin='round' class='svg__stroke--primary-blue-03' /%3E%3C/svg%3E") !important;
   background-size: initial !important;
 }
 
+/* Radio button and checkbox styling */
+.mat-radio-outer-circle,
+.mat-checkbox-frame {
+  border-width: 1.5px !important;
+}
 .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
   border-color: var(--color-primary-blue-03);
 }
 .mat-radio-button.mat-accent .mat-radio-inner-circle {
   background-color: var(--color-default-cyan-03);
 }
-
-.mat-checkbox-checked.mat-accent .mat-checkbox-background {
-  background-color: transparent;
+.mat-checkbox-checked .mat-checkbox-frame {
   border-color: var(--color-primary-blue-03);
 }
-
 .mat-checkbox-checkmark {
   padding: 1px;
 }
-
 .mat-checkbox-checkmark-path {
   stroke: var(--color-default-cyan-03) !important;
 }
-
 .mat-checkbox-inner-container {
   height: 20px !important;
   width: 20px !important;
 }
-
 input[type=checkbox]:focus {
   outline: none !important;
+}
+
+/* Set color of icons */
+.mat-icon {
+  color: var(--color-primary-blue-04) !important;
+}
+
+/* Set alert box styling */
+.alert {
+  padding: 16px;
+  border: 0;
 }

@@ -1,0 +1,43 @@
+/* Copy the following custom font face declarations in Springshare */
+
+@import url("https://use.typekit.net/xso3wzv.css");
+
+@font-face {
+    font-family: "Karbon";
+    src: url(//libapps.s3.amazonaws.com/sites/705/include/karbon-web-light.woff) format("woff");
+    font-style: normal;
+    font-weight: 300;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: "Karbon";
+    src: url(//libapps.s3.amazonaws.com/sites/705/include/karbon-web-regular.woff) format("woff");
+    font-style: normal;
+    font-weight: 400;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: "Karbon";
+    src: url(//libapps.s3.amazonaws.com/sites/705/include/karbon-web-medium.woff) format("woff");
+    font-style: normal;
+    font-weight: 500;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: "Karbon";
+    src: url(//libapps.s3.amazonaws.com/sites/705/include/karbon-web-semibold.woff) format("woff");
+    font-style: normal;
+    font-weight: 600;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: "Karbon";
+    src: url(//libapps.s3.amazonaws.com/sites/705/include/karbon-web-bold.woff) format("woff");
+    font-style: normal;
+    font-weight: 700;
+    font-display: auto;
+}
